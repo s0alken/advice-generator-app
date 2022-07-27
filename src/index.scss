@@ -1,0 +1,132 @@
+//Colors
+
+//Primary
+
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+
+//Neutral
+
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+//MEDIA QUERY
+
+$breakpoint: 25em; //400px
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $dark-blue;
+}
+
+.card {
+  max-width: 54rem;
+  border-radius: 1.5rem;
+  padding: 4.8rem 4.8rem 7.2rem 4.8rem;
+
+  background: $dark-grayish-blue;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+
+  margin: 2.4rem;
+
+  position: relative;
+
+  text-align: center;
+
+  @media only screen and (max-width: $breakpoint) {
+    padding: 4rem 2.4rem 6.4rem 2.4rem;
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+
+    text-transform: uppercase;
+    letter-spacing: 4.08571px;
+
+    color: $neon-green;
+    margin-bottom: 2.4rem;
+
+    @media only screen and (max-width: $breakpoint) {
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      letter-spacing: 3.45714px;
+    }
+
+  }
+
+  &__quote {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.3px;
+
+    color: $light-cyan;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $breakpoint) {
+      font-size: 2.4rem;
+      line-height: 3.3rem;
+      letter-spacing: -0.257143px;
+
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__divider {
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: none;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+
+    background-color: $neon-green;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: all .2s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 40px $neon-green;
+    }
+
+  }
+}
