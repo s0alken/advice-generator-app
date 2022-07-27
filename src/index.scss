@@ -15,6 +15,10 @@ $dark-blue: hsl(218, 23%, 16%);
 
 $breakpoint: 25em; //400px
 
+//Button size
+
+$button-size: 6.4rem;
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
 *,
@@ -48,7 +52,7 @@ body {
   background: $dark-grayish-blue;
   box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
 
-  margin: 2.4rem;
+  margin: 2.4rem 2.4rem calc($button-size / 2) 2.4rem;
 
   position: relative;
 
@@ -109,8 +113,8 @@ body {
 
     border-style: none;
 
-    width: 6.4rem;
-    height: 6.4rem;
+    width: $button-size;
+    height: $button-size;
     border-radius: 50%;
 
     background-color: $neon-green;
