@@ -125,11 +125,15 @@ body {
 
     transform: translate(-50%, -50%);
 
+    -webkit-tap-highlight-color: transparent;
+
     transition: all .2s;
 
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0px 0px 40px $neon-green;
+    @media not all and (hover: none) {
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 40px $neon-green;
+      }
     }
 
   }
