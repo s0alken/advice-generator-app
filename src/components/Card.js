@@ -14,7 +14,7 @@ const Card = ({ slip, fetchSlip }) => {
             ) : <p className="card__quote">Loading...</p>}
 
             <picture className="card__divider">
-                <source srcset={pattern_divider_mobile} media="(max-width: 25em)" />
+                <source srcSet={pattern_divider_mobile} media="(max-width: 25em)" />
                 <img src={pattern_divider_desktop} alt="Divider" />
             </picture>
 
